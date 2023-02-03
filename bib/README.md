@@ -1,3 +1,6 @@
 # Bibliography
+[Eloquent JavaScript](https://eloquentjavascript.net/index.html)
 
-Include in this directory all references and additional material used in your project
+[Modern JavaScript tutorial](https://es.javascript.info/)
+
+[Mozilla JavaScript guide](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide)
