@@ -6,16 +6,16 @@ let example = 'Hello World'
 
 example = 2
 
-console.log(typeof string) // number
+console.log(typeof example) // number
 
 ```
 
 Y es tipado débil ya que no es necesario especificar el tipo de una variable:
 
 ```js
-let number = 2
+let num = 2
 
-console.log(typeof 2) // number
+console.log(typeof num) // number
 ```
 
 # Valores, tipos y operadores(if-else,...)
