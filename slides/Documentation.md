@@ -130,14 +130,14 @@ true // va a ser true siempre
   ```
 - Asignación:
 
-```js
-=   // Asignación simple
-+=  // Suma y asignación
--=  // Resta y asignación
-*=  // Multiplicación y asignación
-/=  // División y asignación
-%=  // Módulo y asignación
-```
+  ```js
+  =   // Asignación simple
+  +=  // Suma y asignación
+  -=  // Resta y asignación
+  *=  // Multiplicación y asignación
+  /=  // División y asignación
+  %=  // Módulo y asignación
+  ```
 ## Operador ternario
 
 ```js
@@ -158,9 +158,9 @@ let getTime = (seconds) => {
   )
 }
 
-getTime(90)      // minutes
-getTime(86300)   // hours
-getTime(234894)  // days
+console.log(getTime(90))      // minutes
+console.log(getTime(86300))   // hours
+console.log(getTime(234894))  // days
 ```
 
 ## Conversión de tipos
