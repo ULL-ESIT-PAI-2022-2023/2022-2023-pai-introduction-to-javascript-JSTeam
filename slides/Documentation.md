@@ -61,14 +61,16 @@ console.log(typeof null) // object*
 
 - Sets
   ```js
-  let set = new Map()
-  console.log(typeof set) // object
+    let set = new Set(["sumit","anil","amit"])
+    console.log(typeof set)           // object
   ```
 
 - Function (deriva del constructor de objeto)
   ```js
-  let funct = function() {}
-  console.log(typeof funct) // function
+    let myFunction = function(p1, p2) {
+      return p1 * p2;
+    }
+    console.log(typeof myFunction)   // function
   ```
 
 ## Diferencias entre ambos (primitivos por valor y objetos por referencias)
