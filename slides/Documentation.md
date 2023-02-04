@@ -61,6 +61,7 @@ console.log(typeof null) // object*
 
 - Sets
   ```js
+  let set = new Map()
   console.log(typeof set) // object
   ```
 
