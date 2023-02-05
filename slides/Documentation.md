@@ -341,5 +341,143 @@ Reading a property that doesn’t exist will give you the value `undefined`.
 
 
 # JS Moderno
-## use strict
-## let
+
+## What is it?
+Modern JavaScript is a safe, latest update way of coding in JS.
+In general, modern JavaScript is considered to be more concise, expressive, and efficient than older versions, and is designed to make it easier for developers to create dynamic, high-performing web applications.
+
+## Where do we start?
+We should start by adding this at the first line of your code: `"use strict"`.
+This way, we enable Strict Mode  that changes the semantics of the JavaScript language and force you to code in a modern style.
+
+There are a lot of cool features of Modern JS.  But we can't cover them all, so here are the ones we like the most:
+## Spread operator for arrays
+
+```js
+let firstHalf = [ 'one', 'two'];
+let secondHalf = ['three', 'four'];
+
+let complete = [...firstHalf, ...secondHalf]
+
+console.log(complete) // [ 'one', 'two', 'three', 'four' ]
+```
+
+## Spread operator for objects
+
+```js
+let hero = {
+  name: 'Xena - Warrior Princess',
+  realName: 'Lucy Lawless'
+}
+
+
+let heroWithSword = {
+ ...hero,
+ weapon: 'sword'
+}
+
+console.log(heroWithSword)  
+/* {
+    name: 'Xena - Warrior Princess',
+    realName: 'Lucy Lawless',
+    weapon: 'sword'
+   } */
+```
+## Rest parameter
+
+```js
+let myFun = (a, b, ...manyMoreArgs) => {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
+}
+
+myFun("one", "two", "three", "four", "five", "six");
+
+// a, one
+// b, two
+// manyMoreArgs, ["three", "four", "five", "six"] 
+```
+## String interpolation
+```js
+class Product {
+  constructor(name, description, price) {
+    this.name = name;
+    this.description = description;
+    this.price = price;
+  }
+ 
+ showInformation() {
+    return `Full description \n: 
+    name: ${this.name}
+    description ${this.description}
+    `;
+  }
+};
+```
+##  Array methods(“find()”, “findIndex()”, “some()”, “includes()”)
+
+```js
+let array = [{ id: 1, checked: true }, { id: 2 }];
+
+array.find(item => item.id === 2)       // { id: 2 }
+array.findIndex(item => item.id === 2)  // 1
+array.some(item => item.checked)        // true
+
+let numberArray = [1,2,3,4];
+
+numberArray.includes(2) // true
+```
+
+## Flat()
+
+```js
+[1, 2, 3, [4, 5]].flat()          // [1, 2, 3, 4, 5]
+[1, 2, 3, [4, 5,[6, 7]]].flat(2)  // [1, 2, 3, 4, 5, 6, 7]
+```
+## At
+
+```js
+['this', 'presentation', 'is', 'awesome'].at(-1) // awesome
+
+let words = ['this', 'presentation', 'is', 'awesome'];
+words[words.length - 1] // awesome
+```
+
+## For of
+
+```js
+let list = [4, 5, 6];
+
+for (let i in list) {
+   console.log(i) // "0", "1", "2",
+}
+
+for (let i of list) {
+   console.log(i) // "4", "5", "6"
+}
+```
+
+## Arrow Functions and let usage
+
+```js
+let printArray = function(arr) {
+  // do something
+}
+
+let printArray = (arr) => {
+  // do something
+}
+
+let add = (a, b) => a + b
+
+let add = function(a, b) { return a + b }
+```
+
+And that's all, thanks fo reading this far, if you want to investigate more on your own, we leave you the references used for this work in referencias.md in the bib folder.
+Also you can contact us at:
+
+Enrique Álvarez Mesa (alu0101142104@ull.edu.es)
+Sergio de la Barrera García (alu0100953275@ull.edu.es)
+
+
