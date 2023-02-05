@@ -340,7 +340,7 @@ Each property has a name followed by a colon and a value. When an object is writ
 Reading a property that doesn’t exist will give you the value `undefined`.
 
 
-# JS Moderno
+# Modern JS 
 
 ## What is it?
 Modern JavaScript is a safe, latest update way of coding in JS.
