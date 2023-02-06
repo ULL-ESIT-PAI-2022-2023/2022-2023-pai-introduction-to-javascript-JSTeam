@@ -48,7 +48,7 @@ console.log(typeof undefined) // undefined
 ```js
 console.log(typeof null) // object*
 ```
-## Objets:
+## Objects:
 - { }
   ```js
   console.log(typeof {}) // object
