@@ -40,5 +40,23 @@ class Polygon {
   } 
 };
 
-let polyObj = new Polygon(10,20); 
+let polyObj = new Polygon(10, 20); 
+console.log(polyObj.toString());
+
+
+class Polygon {
+  height_;
+  width_;
+
+  constructor(height, width) { 
+    this.height_ = height; 
+    this.width_ = width;
+  }
+
+  toString() { 
+    return `(${this.height_}, ${this.width_})`;
+  } 
+};
+
+let polyObj = new Polygon(10, 20); 
 console.log(polyObj.toString());
