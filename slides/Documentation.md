@@ -1,5 +1,5 @@
-# ¿Qué tipo de lenguaje es javascript?
-Se trata de un lenguaje dinámico y de tipado débil. Esto quiere decir, como deberíais saber de LPP, que podemos cambiar el tipo de una variable en tiempo de ejecución:
+# ¿What type of language is js??
+It is a dynamic and weakly typed language. This means, as you should know from LPP, that we can change the type of a variable at runtime:
 
 ```js
 let example = 'Hello World'
@@ -10,7 +10,7 @@ console.log(typeof example) // number
 
 ```
 
-Y es tipado débil ya que no es necesario especificar el tipo de una variable:
+And it is weakly typed since it is not necessary to specify the type of a variable (unlike Typescript):
 
 ```js
 let num = 2
@@ -18,10 +18,9 @@ let num = 2
 console.log(typeof num) // number
 ```
 
-# Valores, tipos y operadores(if-else,...)
-## Tipos primitivos:
+# Values, types and operands(if-else,...)
+## Primitives Types:
 ### String
-Es el que conocemos de cualquier otro lenguaje
 ```js
 console.log(typeof "String") // string
 ```
@@ -49,7 +48,7 @@ console.log(typeof undefined) // undefined
 ```js
 console.log(typeof null) // object*
 ```
-## Objetos:
+## Objets:
 - { }
   ```js
   console.log(typeof {}) // object
@@ -65,7 +64,7 @@ console.log(typeof null) // object*
     console.log(typeof set)           // object
   ```
 
-- Function (deriva del constructor de objeto)
+- Function
   ```js
     let myFunction = function(p1, p2) {
       return p1 * p2;
@@ -73,11 +72,11 @@ console.log(typeof null) // object*
     console.log(typeof myFunction)   // function
   ```
 
-## Diferencias entre ambos (primitivos por valor y objetos por referencias)
-Los primitivos se comparan por valor, en cambio los objetos se comparan por 
-referencia(por dirección de memoria). De manera que al comparar dos objetos con
-el mismo contenido, como vemos en el ejemplo, no son iguales ya que apuntan a
-diferentes direcciones de memoria.
+## Differences between both (primitives by value and objects by references)
+Primitives are compared by value, while objects are compared by
+reference (by memory address). So when comparing two objects with
+the same content, as we see in the example, are not the same since they point to
+different memory addresses.
 
 ```js
 console.log("1" === "1") // true
@@ -85,62 +84,68 @@ console.log("1" === "1") // true
 console.log({a: 1, b: 2} === {a: 1, b: 2}) // false
 ```
 
-En el caso particular de null, se comporta como un primitivo pero al hacer el 
-typeof devuelve object.
+In the particular case of null, it behaves like a primitive but when doing the
+typeof returns object.
 
 ```js
 console.log(null  === null) // true
 ```
 
-Los primitivos son inmutables, es decir, no puedes cambiar su valor, a diferencia 
-de los objetos: 
+Primitives are immutable, that is, you cannot change their value, unlike
+of the objects: 
 
 ```js
-true // va a ser true siempre
+true // always true
 
-1 // va a ser siempre 1
+1 // always 1
 ```
 
-## Operadores binarios
-- Matemáticos:
+## Binary Operators
+- Mathematical:
 
   ```
-  Suma (+)
-  Resta (-)
-  Multiplicación (*)
-  División (/)
-  Módulo (%)```
+  1 + 1   // 2 (sum)
+  1 - 1   // 0 (subtraction)
+  1 * 1   // 1 (multiplication)
+  1 / 1   // 1 (division)
+  1 % 1   // 0 (module)
+  1 ** 1  // 1 (exponentiation)
+  ```
 
-- Lógicos:
+- Logic:
 
   ```js 
   && // AND
   || // OR
   ```
 
-- Comparación:
+- Comparison:
 
   ```js
-  ==   // Igual
-  !=   // No igual
-  ===  // Estrictamente igual  
-  !==  // No estrictamente igual
-  >    // Mayor que
-  <    // Menor que
-  >=   // Mayor o igual que
-  <=   // Menor o igual que
+  1 == 1  // true  (equal)
+  1 === 1 // true  (strictly equal)
+
+  1 != 1  // false (not equal)
+  1 !== 1 // false (strictly not equal)
+
+  2 > 1   // true  (greater than)
+  1 >= 1  // true  (greater than or equal to)
+
+  2 < 1   // false (less than)
+  1 <= 1  // true  (less than or equal to)
   ```
-- Asignación:
+- Assignment:
 
   ```js
-  =   // Asignación simple
-  +=  // Suma y asignación
-  -=  // Resta y asignación
-  *=  // Multiplicación y asignación
-  /=  // División y asignación
-  %=  // Módulo y asignación
+  let a = 1;  // a = 1      (assignment)
+  a += 1;     // a = a + 1  (addition assignment)
+  a -= 1;     // a = a - 1  (subtraction assignment)
+  a *= 1;     // a = a * 1  (multiplication assignment)
+  a /= 1;     // a = a / 1  (division assignment)
+  a %= 1;     // a = a % 1  (module assignment)
+  a **= 1;    // a = a ** 1 (exponentiation assignment)
   ```
-## Operador ternario
+## Ternary operator
 
 ```js
 console.log(true ? 1 : 2);
@@ -149,7 +154,7 @@ console.log(false ? 1 : 2);
 // → 2
 ```
 
-## Anidados
+## Nested
 ```js
 let getTime = (seconds) => {
   return (
@@ -165,7 +170,7 @@ console.log(getTime(86300))   // hours
 console.log(getTime(234894))  // days
 ```
 
-## Conversión de tipos
+## Type coercion
 When an operator is applied to the "wrong" value type, JavaScript will silently cast that value to the type it needs, using a set of rules that are often not what you want or expect. This is called *type coercion*
 
 Javascript is a lax programming language and will accept almost any program you give it, allowing you to do weird things like:
